@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nova Square', cursive;
+            background-image: linear-gradient(to right, darkblue, blue, lightblue);
+
+        }
+
+        .header {
+            padding: 1px;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(to right, darkgreen, green, lightgreen);
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 100%;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .foot{
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            color: white;
+        }
+        .time{
+            color: blue;
+        }
+        .body{
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Pravin Pirate Blogs</h1>
+    </div>
+
+    <div class="row">
+  
+        <div class="leftcolumn">
+            <div class="card">
+                <h2> {{posts.title}} </h2>
+                <h5 class="time"> {{posts.created_at}} </h5>
+                <p class="body"> {{posts.body}}</p>
+            </div>
+        </div>
+
+    </div>
+    <p class="foot">© Copyright 2022 Pravin Pirate Blogs</p>
+</body>
+
+</html>
